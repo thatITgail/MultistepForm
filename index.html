@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- links  -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./index.css">
+  <title>Multi step form</title>
+</head>
+<body>
+  <main class="wrapper">
+    <header class="header">
+      <div class="img-wrapper">
+        <img src="./images/bg-sidebar-mobile.svg" alt="mobile-img" class="img mobile-img">
+        <img src="./images/bg-sidebar-desktop.svg" alt="desktop-img" class="img desktop-img">
+      </div>
+      <nav class="num-div">
+        <div class="flex mar-flex">
+          <span class="num active" data-id="form">1</span>
+          <div class="nav-text">
+            <p class="nav-no">Step 1</p>
+            <p class="nav-title">your info</p>
+          </div>
+        </div>
+        <div class="flex mar-flex">
+          <span class="num" data-id="options">2</span>
+          <div class="nav-text">
+            <p class="nav-no">Step 2</p>
+            <p class="nav-title">select plan</p>
+          </div>
+        </div>
+        <div class="flex mar-flex">
+          <span class="num" data-id="adds-on">3</span>
+          <div class="nav-text">
+            <p class="nav-no">Step 3</p>
+            <p class="nav-title">add-ons</p>
+          </div>
+        </div>
+        <div class="flex mar-flex">
+          <span class="num" data-id="summary">4</span>
+          <div class="nav-text">
+            <p class="nav-no">Step 4</p>
+            <p class="nav-title">summary</p>
+          </div>
+        </div>
+        <span class="num" data-id="confirm">4</span>
+      </nav>
+    </header>
+    <section class="main">
+      <!-- 1st section -->
+      <article class="form-section content active" data-id="form">
+        <h2 class="bold">Personal info</h2>
+        <p class="form-p">Please provide your name, email address, and phone number.</p>
+        <form class="form">
+          <!-- name input -->
+          <div class="flex">
+            <label for="name">Name</label>
+            <small class="error" data-id="name">This field is required</small>
+          </div>
+          <input type="text" class="input name" placeholder="e.g. Stephen King" name="name" data-id="name">
+          <!-- email input -->
+          <div class="flex">
+            <label for="email">Email Address</label>
+            <small class="error" data-id="email">This field is required</small>
+          </div>
+          <input type="text" class="input email" placeholder="e.g. stephenking@lorem.com" name="email" data-id="email">
+          <!-- phone number input -->
+          <div class="flex">
+            <label for="phone number">Phone Number</label>
+            <small class="error" data-id="phone">This field is required</small>
+          </div>
+          <input type="text" class="input phone" placeholder="e.g. +1 234 567 890" data-id="phone"> 
+        </form>
+      </article>
+      <!-- 2nd section -->
+      <article class="bill-form-sec content" data-id="options">
+        <h2 class="bold">Select your plan</h2>
+        <p class="bill-p">You have the option of monthly or yearly billing.</p>
+        <div class="bill-container">
+          <div class="bill-format" data-id="arcade">
+            <img src="./images/icon-arcade.svg" alt="arcade-icon" class="icon">
+            <div class="details">
+              <h3 class="type">Arcade</h3>
+              <p class="mnth-price">$9/mo</p>
+              <p class="yr-price">$90/yr</p>
+              <span class="period">2 months free</span>
+            </div>
+          </div>
+          <div class="bill-format" data-id="advanced">
+            <img src="./images/icon-advanced.svg" alt="advanced-icon" class="icon">
+            <div class="details">
+              <h3 class="type">Advanced</h3>
+              <p class="mnth-price">$12/mo</p>
+              <p class="yr-price">$120/yr</p>
+              <span class="period">2 months free</span>
+            </div>
+          </div>
+          <div class="bill-format" data-id="pro">
+            <img src="./images/icon-pro.svg" alt="pro-icon" class="icon">
+            <div class="details">
+              <h3 class="type">Pro</h3>
+              <p class="mnth-price">$15/mo</p>
+              <p class="yr-price">$150/yr</p>
+              <span class="period">2 months free</span>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <span class="monthly active">Monthly</span>
+          <button class="btn">
+            <span class="white-circle"></span>
+          </button>
+          <span class="yearly ">Yearly</span>
+        </div>
+      </article>
+      <!-- 3rd section -->
+      <article class="addon-sec content" data-id="adds-on">
+        <h2 class="bold">Pick add-ons</h2>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <div class="addon-container">
+          <form >
+            <div class="each-addon flex"     data-value="service">
+              <input type="checkbox" name="service" data-value="service" class="check-icon">
+              <div class="middle">
+                <h3 class="medium">Online service</h3>
+                <p>Access to multiplayer games</p>
+              </div>
+              <span class="add-price">+$1/mo</span>
+            </div>
+            <div class="each-addon flex" data-value="storage">
+              <input type="checkbox" name="storage" data-value="storage">
+              <div class="middle">
+                <h3 class="medium">Larger Storage</h3>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+              <span class="add-price">+$2/mo</span>
+            </div>
+            <div class="each-addon flex" data-value="profile">
+              <input type="checkbox" name="profile" data-value="profile">
+              <div class="middle">
+                <h3 class="medium">Customizable Profile</h3>
+                <p>Custom theme on your profile</p>
+              </div>
+              <span class="add-price">+$2/mo</span>
+            </div>
+          </form> 
+        </div>
+      </article>
+      <!-- 4th section -->
+      <article class="summ-sec content" data-id="summary">
+        <h2 class="bold">Finishing up</h2>
+        <p>Double-check everything looks OK before confirming.</p>
+        <!-- <div class="select">
+          <div class="options">
+            <h4 class="choice">Arcade (Monthly)</h4>
+            <div class="flex top">
+              <button class="change-btn">Change</button>
+              <p class="select-price">$9/mo</p>
+            </div>
+            <div class="line"></div>
+            <div class="flex">
+              <p>Online service</p>
+              <p class="price">+$1/mo</p>
+            </div>
+            <div class="flex">
+              <p>Larger storage</p>
+              <p class="price">+$2/mo</p>
+            </div>
+          </div>
+          <div class="flex total">
+            <p>Total (per month)</p>
+            <p class="tot-price">+$12/mo</p>
+          </div>
+        </div> -->
+      </article>
+      <!-- 5th section -->
+      <article class="confirm-msg content" data-id="confirm">
+        <img src="./images/icon-thank-you.svg" alt="success-icon" class="icon-large">
+        <h2 class="bold-center">Thank you!</h2>
+        <p class="msg-p">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need
+        support, please feel free to email us at support@loremgaming.com</p>
+      </article>
+    </section>
+    <!-- footer -->
+    <footer class="foot-btn-section">
+      <button class="foot-btn prev">Go Back</button>
+      <button class="foot-btn next">Next Step</button>
+    </footer>
+  </main>
+  <!-- Js -->
+  <script src="./index.js"></script>
+</body>
+</html>
